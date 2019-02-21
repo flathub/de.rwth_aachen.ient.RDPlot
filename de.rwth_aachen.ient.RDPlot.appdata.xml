@@ -20,6 +20,11 @@ It can:
     </p>
   </description>
   <url type="homepage">https://github.com/IENT/RDPlot</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/flathub/de.rwth_aachen.ient.RDPlot/blob/master/RDPlot-screenshot.png</image>
+    </screenshot>
+  </screenshots>
   <content_rating type="oars-1.0">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
