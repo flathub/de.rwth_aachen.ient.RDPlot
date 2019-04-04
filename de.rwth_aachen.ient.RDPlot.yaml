@@ -49,8 +49,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://www.riverbankcomputing.com/static/Downloads/sip/sip-4.19.14.tar.gz
-        sha256: 0ef3765dbcc3b8131f83e60239f49508f82205b33cae5408c405e2e2f2d0af87
+        url: https://www.riverbankcomputing.com/static/Downloads/sip/4.19.15/sip-4.19.15.tar.gz
+        sha256: 2b5c0b2c0266b467b365c21376d50dde61a3236722ab87ff1e8dacec283eb610
 
   - name: pyqt
     buildsystem: simple
@@ -70,8 +70,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://www.riverbankcomputing.com/static/Downloads/PyQt5/PyQt5_gpl-5.12.tar.gz
-        sha256: d9e70065b5980afde5f2b9bc900910050331604e02c70666c45fcfc66b0d4f34
+        url: https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.12.1/PyQt5_gpl-5.12.1.tar.gz
+        sha256: 3718ce847d824090fd5f95ff3f13847ee75c2507368d4cbaeb48338f506e59bf
 
   - name: gfortran
     buildsystem: simple
@@ -146,14 +146,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/IENT/RDPlot.git
-        commit: 9f5109f43bed45cbe1201d0e573e32ec469e8c82
+        commit: cea35ffb7f021bc545da32f2ec5eb5c0c32cfb81
         branch: master
       - type: file
         path: de.rwth_aachen.ient.RDPlot.desktop
       - type: file
         path: de.rwth_aachen.ient.RDPlot.appdata.xml
     build-commands:
-      - echo "v1.2.0-40-g9f5109f"  > version.txt # workaround for letting setup.py know version
+      - echo "v1.3.1"  > version.txt # workaround for letting setup.py know version
       - FLATPAK_INSTALL=1 python3 setup.py install --install-scripts=/bin  --root=/app --install-lib=/lib/python3.5/site-packages/ 
       - install -Dm644 src/rdplot/logo/PLOT16.png     /app/share/icons/hicolor/16x16/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 src/rdplot/logo/PLOT32.png     /app/share/icons/hicolor/32x32/apps/de.rwth_aachen.ient.RDPlot.png
@@ -163,4 +163,4 @@ modules:
       - install -Dm644 src/rdplot/logo/PLOT512.png    /app/share/icons/hicolor/512x512/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 de.rwth_aachen.ient.RDPlot.desktop         /app/share/applications/de.rwth_aachen.ient.RDPlot.desktop
       - install -Dm644 de.rwth_aachen.ient.RDPlot.appdata.xml     /app/share/metainfo/de.rwth_aachen.ient.RDPlot.appdata.xml
-      - echo "v1.2.0-40-g9f5109f"  > /app/lib/python3.5/site-packages/rdplot/version.txt # workaround for letting installed rdplot know the version
+      - echo "v1.3.1"  > /app/lib/python3.5/site-packages/rdplot/version.txt # workaround for letting installed rdplot know the version
