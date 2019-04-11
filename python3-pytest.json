@@ -2,7 +2,7 @@
     "name": "python3-pytest",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pytest"
+        "pip3 install -v --no-index --no-build-isolation --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pytest"
     ],
     "sources": [
         {
