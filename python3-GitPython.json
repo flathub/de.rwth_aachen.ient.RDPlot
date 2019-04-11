@@ -7,13 +7,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ad/e9/0fb974b182ff41d28ad267d0b4201b35159619eb610ea9a2e036817cb0b8/smmap2-2.0.4.tar.gz",
-            "sha256": "dc216005e529d57007ace27048eb336dcecb7fc413cfb3b2f402bb25972b69c6"
+            "url": "https://files.pythonhosted.org/packages/3b/ba/e49102b3e8ffff644edded25394b2d22ebe3e645f3f6a8139129c4842ffe/smmap2-2.0.5.tar.gz",
+            "sha256": "29a9ffa0497e7f2be94ca0ed1ca1aa3cd4cf25a1f6b4f5f87f74b46ed91d609a"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/b9/36/4bdb753087a9232899ac482ee2d5da25f50b63998d661aa4e8170acd95b5/gitdb2-2.0.4.tar.gz",
-            "sha256": "bb4c85b8a58531c51373c89f92163b92f30f81369605a67cd52d1fc21246c044"
+            "url": "https://files.pythonhosted.org/packages/c4/5c/579abccd59187eaf6b3c8a4a6ecd86fce1dfd818155bfe4c52ac28dca6b7/gitdb2-2.0.5.tar.gz",
+            "sha256": "83361131a1836661a155172932a13c08bda2db3674e4caa32368aa6eb02f38c2"
         },
         {
             "type": "file",
