@@ -129,11 +129,10 @@ modules:
         url: https://files.pythonhosted.org/packages/a9/b4/5598a706697d1e2929eaf7fe68898ef4bea76e4950b9efbe1ef396b8813a/scipy-1.2.1.tar.gz
         sha256: e085d1babcb419bbe58e2e805ac61924dac4ca45a07c9fa081144739e500aa3c
 
-  - python3-setuptools.json
   - python3-setuptools-scm.json
-  - python3-python-dateutil.json
   - python3-GitPython.json
   - python3-cycler.json
+  - python3-pytz.json
   - python3-matplotlib.json
   - python3-matplotlib2tikz.json
   - python3-py.json
@@ -145,7 +144,7 @@ modules:
   - python3-xmltodict.json
   - python3-jsonpickle.json
 
-  - python3-pytz.json
+
 
   - name: RDPlot
     buildsystem: simple

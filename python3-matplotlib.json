@@ -2,7 +2,7 @@
     "name": "python3-matplotlib",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install -v --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} matplotlib"
+        "pip3 install -v --no-index  --no-build-isolation --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} matplotlib"
     ],
     "sources": [
         {
