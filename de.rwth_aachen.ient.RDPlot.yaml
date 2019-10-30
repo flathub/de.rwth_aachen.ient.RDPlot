@@ -1,9 +1,11 @@
 app-id: de.rwth_aachen.ient.RDPlot
 runtime: org.kde.Platform
-runtime-version: '5.11'
+runtime-version: '5.12'
 sdk: org.kde.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.gfortran-62
+# gfortran is part of the Freedesktop Sdk 18.08:
+# https://github.com/flathub/org.freedesktop.Sdk.Extension.gfortran-62/issues/3
+#sdk-extensions:
+#  - org.freedesktop.Sdk.Extension.gfortran-62
 command: rdplot
 
 finish-args:
@@ -29,8 +31,8 @@ cleanup:
   - '*.la'
   - '*.cmake'
 
-build-options:
-  append-path: "/usr/lib/sdk/gfortran-62/bin"
+#build-options:
+#  append-path: "/usr/lib/sdk/gfortran-62/bin"
 
 modules:
   - name: sip
@@ -73,10 +75,10 @@ modules:
         url: https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.12.1/PyQt5_gpl-5.12.1.tar.gz
         sha256: 3718ce847d824090fd5f95ff3f13847ee75c2507368d4cbaeb48338f506e59bf
 
-  - name: gfortran
-    buildsystem: simple
-    build-commands:
-      - "/usr/lib/sdk/gfortran-62/install.sh"
+#  - name: gfortran
+#    buildsystem: simple
+#    build-commands:
+#      - "/usr/lib/sdk/gfortran-62/install.sh"
   - name: lapack
     buildsystem: cmake
     builddir: true
@@ -84,7 +86,7 @@ modules:
       - "-DCMAKE_BUILD_TYPE=Release"
       - "-DBUILD_SHARED_LIBS=ON"
       - "-DBUILD_TESTING=OFF"
-      - "-DCMAKE_Fortran_COMPILER=/usr/lib/sdk/gfortran-62/bin/gfortran"
+#      - "-DCMAKE_Fortran_COMPILER=/usr/lib/sdk/gfortran-62/bin/gfortran"
       - "-DLAPACKE=ON"
       - "-DCBLAS=ON"
     sources:
@@ -108,8 +110,8 @@ modules:
       - "/bin"
     sources:
       - type: archive
-        url: https://pypi.python.org/packages/0b/66/86185402ee2d55865c675c06a5cfef742e39f4635a4ce1b1aefd20711c13/numpy-1.14.2.zip
-        sha256: facc6f925c3099ac01a1f03758100772560a0b020fb9d70f210404be08006bcb
+        url: https://github.com/numpy/numpy/releases/download/v1.14.3/numpy-1.14.3.tar.gz
+        sha256: cfcfc7a9a8ba4275c60a815c683d59ac5e7aa9362d76573b6cc4324ffb1235fa
 
   - name: python3-scipy
     buildsystem: simple
@@ -124,14 +126,15 @@ modules:
         LDFLAGS: "-shared"
     sources:
       - type: archive
-        url: https://pypi.python.org/packages/bd/f4/3882758754dc083fea6ea66a6e8ceef55e7df173d06a12a074612958800f/scipy-1.0.1.tar.gz
-        sha256: 8739c67842ed9a1c34c62d6cca6301d0ade40d50ef14ba292bd331f0d6c940ba
+        url: https://files.pythonhosted.org/packages/a9/b4/5598a706697d1e2929eaf7fe68898ef4bea76e4950b9efbe1ef396b8813a/scipy-1.2.1.tar.gz
+        sha256: e085d1babcb419bbe58e2e805ac61924dac4ca45a07c9fa081144739e500aa3c
 
   - python3-setuptools-scm.json
   - python3-GitPython.json
   - python3-cycler.json
+  - python3-pytz.json
   - python3-matplotlib.json
-  - python3-matplotlib2tikz.json
+  - python3-tikzplotlib.json  
   - python3-py.json
   - python3-tabulate.json
   - python3-scandir.json
@@ -141,20 +144,22 @@ modules:
   - python3-xmltodict.json
   - python3-jsonpickle.json
 
+
+
   - name: RDPlot
     buildsystem: simple
     sources:
       - type: git
         url: https://github.com/IENT/RDPlot.git
-        commit: 46c56049a3843da45669107039633566673ed076 
+        commit: f9965ea76bc35190f52e6b365969f86e88acd6f1
         branch: master
       - type: file
         path: de.rwth_aachen.ient.RDPlot.desktop
       - type: file
         path: de.rwth_aachen.ient.RDPlot.appdata.xml
     build-commands:
-      - echo "v1.3.1-1-g46c5604"  > version.txt # workaround for letting setup.py know version
-      - FLATPAK_INSTALL=1 python3 setup.py install --install-scripts=/bin  --root=/app --install-lib=/lib/python3.5/site-packages/ 
+      - echo "v1.3.1-4-gf9965ea"  > version.txt # workaround for letting setup.py know version
+      - FLATPAK_INSTALL=1 python3 setup.py install --install-scripts=/bin  --root=/app --install-lib=/lib/python3.7/site-packages/ 
       - install -Dm644 src/rdplot/logo/PLOT16.png     /app/share/icons/hicolor/16x16/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 src/rdplot/logo/PLOT32.png     /app/share/icons/hicolor/32x32/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 src/rdplot/logo/PLOT64.png     /app/share/icons/hicolor/64x64/apps/de.rwth_aachen.ient.RDPlot.png
@@ -163,4 +168,4 @@ modules:
       - install -Dm644 src/rdplot/logo/PLOT512.png    /app/share/icons/hicolor/512x512/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 de.rwth_aachen.ient.RDPlot.desktop         /app/share/applications/de.rwth_aachen.ient.RDPlot.desktop
       - install -Dm644 de.rwth_aachen.ient.RDPlot.appdata.xml     /app/share/metainfo/de.rwth_aachen.ient.RDPlot.appdata.xml
-      - echo "v1.3.1-1-g46c5604"  > /app/lib/python3.5/site-packages/rdplot/version.txt # workaround for letting installed rdplot know the version
+      - echo "v1.3.1-4-gf9965ea"  > /app/lib/python3.7/site-packages/rdplot/version.txt # workaround for letting installed rdplot know the version

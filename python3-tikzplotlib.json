@@ -1,10 +1,15 @@
 {
-    "name": "python3-mpldatacursor",
+    "name": "python3-tikzplotlib",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} mpldatacursor"
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} tikzplotlib"
     ],
     "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/5b/bb/cdc8086db1f15d0664dd22a62c69613cdc00f1dd430b5b19df1bea83f2a3/Pillow-6.2.1.tar.gz",
+            "sha256": "bf4e972a88f8841d8fdc6db1a75e0f8d763e66e3754b03006cbc3854d89f1cb1"
+        },
         {
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz",
@@ -47,11 +52,6 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl",
-            "sha256": "1d8a5ae1ff6c5cf9b93e8811e581232ad8920aeec647c37316ceac982b08cb2d"
-        },
-        {
-            "type": "file",
             "url": "https://files.pythonhosted.org/packages/11/fa/0160cd525c62d7abd076a070ff02b2b94de589f1a9789774f17d7c54058e/pyparsing-2.4.2-py2.py3-none-any.whl",
             "sha256": "d9338df12903bbf5d65a0e4e87c2161968b10d2e489652bb47001d82a9b028b4"
         },
@@ -62,8 +62,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/fe/29/d7bc0337c6d396583c9e49da5474ed5c86738a5731ca4465987ae4399dcf/mpldatacursor-0.6.2-py3-none-any.whl",
-            "sha256": "eadaad6d8b240a93398d5f57a64cf1e63719eedbd8178890b7d7de470290d85a"
+            "url": "https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl",
+            "sha256": "1d8a5ae1ff6c5cf9b93e8811e581232ad8920aeec647c37316ceac982b08cb2d"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/79/30/338958f475b83d8be33600ea566f0d83564443691889aafe0aea38ded4df/tikzplotlib-0.8.5-py3-none-any.whl",
+            "sha256": "528efaf6df5099056c110cd680bdb94b91afcf4433dbcc799b4c7f8b42fd3d94"
         }
     ]
 }
