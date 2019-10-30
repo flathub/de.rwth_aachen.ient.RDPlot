@@ -1,10 +1,15 @@
 {
-    "name": "python3-matplotlib2tikz",
+    "name": "python3-tikzplotlib",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} matplotlib2tikz"
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} tikzplotlib"
     ],
     "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/5b/bb/cdc8086db1f15d0664dd22a62c69613cdc00f1dd430b5b19df1bea83f2a3/Pillow-6.2.1.tar.gz",
+            "sha256": "bf4e972a88f8841d8fdc6db1a75e0f8d763e66e3754b03006cbc3854d89f1cb1"
+        },
         {
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz",
@@ -32,11 +37,6 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/5b/bb/cdc8086db1f15d0664dd22a62c69613cdc00f1dd430b5b19df1bea83f2a3/Pillow-6.2.1.tar.gz",
-            "sha256": "bf4e972a88f8841d8fdc6db1a75e0f8d763e66e3754b03006cbc3854d89f1cb1"
-        },
-        {
-            "type": "file",
             "url": "https://files.pythonhosted.org/packages/b6/d6/be8f975f5322336f62371c9abeb936d592c98c047ad63035f1b38ae08efe/numpy-1.17.3.zip",
             "sha256": "a0678793096205a4d784bd99f32803ba8100f639cf3b932dc63b21621390ea7e"
         },
@@ -47,8 +47,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/41/17/c62faccbfbd163c7f57f3844689e3a78bae1f403648a6afb1d0866d87fbb/python_dateutil-2.8.0-py2.py3-none-any.whl",
-            "sha256": "7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb"
+            "url": "https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl",
+            "sha256": "3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c"
         },
         {
             "type": "file",
@@ -57,18 +57,18 @@
         },
         {
             "type": "file",
+            "url": "https://files.pythonhosted.org/packages/41/17/c62faccbfbd163c7f57f3844689e3a78bae1f403648a6afb1d0866d87fbb/python_dateutil-2.8.0-py2.py3-none-any.whl",
+            "sha256": "7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb"
+        },
+        {
+            "type": "file",
             "url": "https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl",
             "sha256": "1d8a5ae1ff6c5cf9b93e8811e581232ad8920aeec647c37316ceac982b08cb2d"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl",
-            "sha256": "3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/15/62/b7a234f09c874402949c044600de030aaaed4ddb1925ba7bf085950f0a40/matplotlib2tikz-0.7.6-py2.py3-none-any.whl",
-            "sha256": "eb4fe7905457caa3ec04ce2987bfb9b11c3ce8b505855071e4ca61976b1cef58"
+            "url": "https://files.pythonhosted.org/packages/79/30/338958f475b83d8be33600ea566f0d83564443691889aafe0aea38ded4df/tikzplotlib-0.8.5-py3-none-any.whl",
+            "sha256": "528efaf6df5099056c110cd680bdb94b91afcf4433dbcc799b4c7f8b42fd3d94"
         }
     ]
 }
