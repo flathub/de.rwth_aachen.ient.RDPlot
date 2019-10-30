@@ -151,14 +151,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/IENT/RDPlot.git
-        commit: d56145c2ffe260202fd9cb6bc1683dca84ba2160
+        commit: f9965ea76bc35190f52e6b365969f86e88acd6f1
         branch: master
       - type: file
         path: de.rwth_aachen.ient.RDPlot.desktop
       - type: file
         path: de.rwth_aachen.ient.RDPlot.appdata.xml
     build-commands:
-      - echo "v1.3.1-3-gd56145c"  > version.txt # workaround for letting setup.py know version
+      - echo "v1.3.1-4-gf9965ea"  > version.txt # workaround for letting setup.py know version
       - FLATPAK_INSTALL=1 python3 setup.py install --install-scripts=/bin  --root=/app --install-lib=/lib/python3.7/site-packages/ 
       - install -Dm644 src/rdplot/logo/PLOT16.png     /app/share/icons/hicolor/16x16/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 src/rdplot/logo/PLOT32.png     /app/share/icons/hicolor/32x32/apps/de.rwth_aachen.ient.RDPlot.png
@@ -168,4 +168,4 @@ modules:
       - install -Dm644 src/rdplot/logo/PLOT512.png    /app/share/icons/hicolor/512x512/apps/de.rwth_aachen.ient.RDPlot.png
       - install -Dm644 de.rwth_aachen.ient.RDPlot.desktop         /app/share/applications/de.rwth_aachen.ient.RDPlot.desktop
       - install -Dm644 de.rwth_aachen.ient.RDPlot.appdata.xml     /app/share/metainfo/de.rwth_aachen.ient.RDPlot.appdata.xml
-      - echo "v1.3.1-3-gd56145c"  > /app/lib/python3.7/site-packages/rdplot/version.txt # workaround for letting installed rdplot know the version
+      - echo "v1.3.1-4-gf9965ea"  > /app/lib/python3.7/site-packages/rdplot/version.txt # workaround for letting installed rdplot know the version
